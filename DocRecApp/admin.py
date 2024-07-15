@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Location, Doctor, Patient, Visit
+from .models import Location, Doctor, Patient, Visit
 
 # Register your models here.
 admin.site.register(Location)

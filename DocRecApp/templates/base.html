@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc Rec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body style="background-color: #131313; color: white">
+    <!-- Your content goes here -->
+
+    <div class="flex p-6">
+      <div class="p-8 m-4">
+
+        <h1 class="text-xl font-medium">Your Location</h1>
+
+        <div>
+          <input type="checkbox" id="checkbox" class="">
+          <label for="checkbox" class="checkbox-button">
+            Live Location
+          </label>
+        </div>
+
+        <div class="my-5"> 
+          <form action="/submit-form" method="post">
+            <label for="patients" class="mx-4">Who are you ?</label>
+            <select id="patients" name="patients" class="bg-white-400 text-black py-1 px-4 pr-8 rounded">
+                <option value="Select" disabled selected>Select</option>
+                <option value="Placeholder">Placeholder</option>
+            </select>
+        </form>
+      </div>
+
+        <div class="flex justify-end mt-6">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Find Best Doctor</button>
+        </div>
+      </div>
+      <div class="p-8 m-4">
+        <p>Message</p>
+      </div>
+    </div>
+
+
+    <div class="overflow-x-auto m-20">
+      <table class="table-auto border-collapse border border-gray-300">
+        <thead>
+          <tr class="bg-gray">
+            <th class="px-4 py-2">Doctor</th>
+            <th class="px-4 py-2">Latitude</th>
+            <th class="px-4 py-2">Longitude</th>
+            <th class="px-4 py-2">Visits</th>
+            <th class="px-4 py-2">Appointment Option</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+          <tr>
+            <td class="border px-4 py-2">Suburb Doc A</td>
+            <td class="border px-4 py-2">30</td>
+            <td class="border px-4 py-2">27</td>
+            <td class="border px-4 py-2">2</td>
+            <td class="border px-4 py-2">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
+                Book Appointment
+              </button>
+            </td>
+          </tr>
+          
+          
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
