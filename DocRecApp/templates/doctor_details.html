@@ -1,0 +1,42 @@
+{%extends 'base.html'%} {%block content%}
+
+<h1 class="text-xl font-medium m-6">Doctor Details:</h1>
+
+<div class="overflow-x-auto m-20">
+  <table class="table-auto border-collapse border border-gray-300">
+    <thead>
+      <tr class="bg-gray">
+        <th class="px-4 py-2">Doctor</th>
+        <th class="px-4 py-2">Latitude</th>
+        <th class="px-4 py-2">Longitude</th>
+        <th class="px-4 py-2">Visits</th>
+        <th class="px-4 py-2">Appointment Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+
+      <tr>
+        <td class="border px-4 py-2">{{ doctor.name }}</td>
+        <td class="border px-4 py-2">{{doctor.location.latitude}}</td>
+        <td class="border px-4 py-2">{{doctor.location.longitude}}</td>
+        <td class="border px-4 py-2">{{doctor.visit_count}}</td>
+
+        <td class="border px-4 py-2">
+          <form action="{% url 'book_appointment' doctor.id %}"
+          method="post">
+               {% csrf_token %}
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"
+            >
+              Book Appointment
+            </button>
+          </form>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{%endblock%}
